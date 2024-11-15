@@ -1,0 +1,257 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+/* Projects Section */
+.projects {
+    background: #f4f4f4;
+    padding: 2rem 0;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 1rem);
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.project h3 {
+    margin: 0.5rem 0;
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* Make the header sticky on scroll */
+.header {
+    position:static;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+}
+
+/* For back-to-top button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+#backToTop:hover {
+    background-color: #462f2f;
+}
+
+.skills-list {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+    text-align: center; /* Centers the items */
+}
+
+.skills-list li {
+    display: inline-block;
+    margin: 0 10px; /* Adds space between items */
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    list-style-type: disc; /* Shows bullets */
+    padding-left: 20px; /* Adds indentation */
+}
+
+.skills-list li {
+    margin-bottom: 5px; /* Adds some spacing between items */
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates responsive grid */
+    gap: 20px; /* Space between items */
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Aligns text to the left */
+}
+
+.skills-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px; /* Adds spacing between items */
+}
+
