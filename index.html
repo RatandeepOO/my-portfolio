@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratandeep Arora | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">My Portfolio</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <header class="header">
-        <div class="container">
-            <h1>Ratandeep Arora</h1>
-            <p>Python Developer & AI Enthusiast</p>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container">
+      <h1>About Me</h1>
+      <p>Hello! I'm a fresher skilled in Python and AI/ML. I love coding and developing new solutions!</p>
+      <h2>Contact Details</h2>
+      <p>Email: example@gmail.com</p>
+      <p>Phone: +91 1234567890</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h1>My Skills</h1>
+      <div class="skills-grid">
+        <div class="skill" data-url="https://github.com/example/python-projects">
+          <h2>Python</h2>
+          <p>Advanced scripting and AI/ML development.</p>
         </div>
-    </header>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a passionate Python developer...</p>
-            <ul class="skills-list">
-                <li>Python Programming</li>
-                <li>Machine Learning & AI</li>
-                <li>IoT Solutions (ESP32, Raspberry Pi)</li>
-                <li>Voice Recognition & NLP</li>
-                <li>Cloud Integration</li>
-            </ul>
+        <div class="skill" data-url="https://github.com/example/html-css-projects">
+          <h2>HTML & CSS</h2>
+          <p>Building responsive web pages.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>Personal AI Assistant</h3>
-                    <p>AI-powered voice assistant using Python and ESP32.</p>
-                </div>
-                <div class="project">
-                    <h3>Smart Home Control System</h3>
-                    <p>IoT solution for remote home control with MQTT and ESP32.</p>
-                </div>
-                <div class="project">
-                    <h3>Chatbot Using NLP</h3>
-                    <p>Chatbot application with natural language processing.</p>
-                </div>
-            </div>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h1>My Projects</h1>
+      <div class="project-grid">
+        <div class="project" data-url="https://github.com/example/project1">
+          <h2>Project 1</h2>
+          <p>Description of project 1...</p>
         </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form action="#" method="post">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
+        <div class="project" data-url="https://github.com/example/project2">
+          <h2>Project 2</h2>
+          <p>Description of project 2...</p>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Ratandeep Arora</p>
+        <div class="project" data-url="https://github.com/example/project3">
+          <h2>Project 3</h2>
+          <p>Description of project 3...</p>
         </div>
-    </footer>
+      </div>
+      <a href="projects.html" class="btn">View More</a>
+    </div>
+  </section>
 
-    <script src="script.js" defer></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 My Portfolio</p>
+  </footer>
+
+  <script>
+    // Add click event to redirect to GitHub repo for skills and projects
+    document.querySelectorAll('.skill, .project').forEach(item => {
+      item.addEventListener('click', () => {
+        const url = item.getAttribute('data-url');
+        if (url) {
+          window.open(url, '_blank');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
